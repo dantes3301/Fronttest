@@ -1,0 +1,14 @@
+.footer{
+    margin: 40px 0 0 0;
+    background-color: #fff;
+    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0 20px 0;
+    }
+    &__text{
+        font-size: 16px;
+        color: #9c9c9c;
+    }
+}
