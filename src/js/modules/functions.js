@@ -17,3 +17,24 @@ export function isWebp(){
         }
     });
 }
+
+export function lockBody(){
+    document.body.style.overflow = 'hidden'
+}
+export function unlockBody() {
+	document.body.style.overflow = 'visible'
+}
+// export function timer(){
+//     let time = 5
+//     let startTime = new Date()
+//     let stopTime = startTime.setMinutes(startTime.getMinutes() + time)
+//     console.log(stopTime);
+//     setInterval(() => {
+//         let timeNow = new Date().getTime()
+//         let remain = startTime - timeNow
+//         let min = Math.floor( (remain % (1000 * 60 * 60 * 60)) / (1000 * 60))
+//         let sec = Math.floor((remain % (1000 * 60 )) / (1000))
+//         console.log(min, sec)
+//     },1000)
+// }
+

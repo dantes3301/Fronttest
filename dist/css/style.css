@@ -15,8 +15,7 @@ html {
   font-weight: 400;
   font-style: normal;
   font-optical-sizing: auto;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 18px;
   background-color: #F5F4F3;
 }
 
@@ -73,8 +72,7 @@ main {
 .header__logo {
   color: #000;
   text-decoration: none;
-  border-bottom: 3px solid #5ffff4;
-  padding: 0 0 15px 0;
+  border-bottom: 3px solid #5faaff;
   font-size: 36px;
   font-weight: 700;
   height: -webkit-max-content;
@@ -115,10 +113,10 @@ main {
   visibility: visible;
 }
 
-.header__menu.active-container {
-  -webkit-transform: translate(0, -100%);
-      -ms-transform: translate(0, -100%);
-          transform: translate(0, -100%);
+.header__menu.active .header__menu-container {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .header__menu {
@@ -143,9 +141,11 @@ main {
 }
 
 .header__menu-container {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: 400px;
   height: 100vh;
   background-color: #fff;
@@ -203,6 +203,7 @@ main {
 }
 
 .header__menu-item {
+  cursor: pointer;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 18px;
@@ -233,13 +234,169 @@ main {
   color: #9c9c9c;
 }
 
+.btn_blue {
+  padding: 12px 16px;
+  background-color: #5faaff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 12px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.custom-input {
+  position: relative;
+}
+
+.custom-input input {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.custom-input input:checked + label::after {
+  opacity: 1;
+}
+
+.custom-input input:checked + label::before {
+  -webkit-box-shadow: 0px 0px 8px #5faaff;
+          box-shadow: 0px 0px 8px #5faaff;
+}
+
+.custom-input label {
+  padding: 0 0 0 15px;
+}
+
+.custom-input label::before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #5faaff;
+  border-radius: 50%;
+}
+
+.custom-input label::after {
+  content: " ";
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  background-color: #5faaff;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .main {
-  margin: 120px 0 0 0;
+  margin: 200px 0 0 0;
 }
 
 .main__frame {
   width: 100%;
-  height: 800px;
+  min-height: 800px;
   background-color: #fff;
   border-radius: 24px;
+  padding: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.main .start-test.disable {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
+  position: absolute;
+}
+
+.main .start-test {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 12px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.main .start-test .test__title h1 {
+  text-align: center;
+}
+
+.main .start-test .test__text p {
+  text-align: center;
+}
+
+.main .start-test .btn__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 100px 0 0 0;
+}
+
+.main .test {
+  -webkit-transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+
+.main .test.active {
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.main .test__title {
+  text-align: center;
+}
+
+.main .test__text {
+  text-align: center;
+}
+
+.main .test__question {
+  margin: 40px 0 0 0;
+}
+
+.main .question__text {
+  margin: 0 0 20px 0;
+}
+
+.main .question__items .custom-input:not(:last-child) {
+  margin: 0 0 10px 0;
 }
