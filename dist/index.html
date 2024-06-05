@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css?_v=20240604171831">
+    <link rel="stylesheet" type="text/css" href="css/style.css?_v=20240605220900">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>index</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&_v=20240604171831" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&_v=20240605220900" rel="stylesheet">
 
 </head>
 <body>
@@ -66,11 +66,11 @@
         <p>Время на прохождение: <span class="time-min">5</span>:<span class="time-sec">00</span> </p>
     </div>
     <div class="test__question">   
-        <div class="question__text">
+        <!-- <div class="question__text">
             Вопрос <span>1</span>: Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequuntur sit earum laboriosam aspernatur! Beatae quas veritatis placeat cupiditate quasi quo amet molestias consectetur eveniet dolores debitis, esse, mollitia nobis.
-        </div>
-        <div class="question__items">
-            <div class="question__item">
+        </div> -->
+        <div class="quez-frame">
+            <!-- <div class="question__item">
                 <div class="custom-input">
                     <input type="radio" id="1">
                     <label for="1">Lorem ipsum dolor</label>
@@ -78,11 +78,30 @@
                 <div class="custom-input">
                     <input type="radio" id="1">
                     <label for="1">Lorem ipsum dolor</label>
+                </div>
+            </div> -->
+
+            <div class="quiz__head">
+                <div class="head__content" id="head">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ducimus odit accusamus, illum quas magni provident odio praesentium commodi sint, porro harum, minus cupiditate architecto culpa aut ex dolore officia.</div>
+            </div>
+            <div class="quiz__body">
+                <div class="buttons">
+                    <div class="buttons__content" id="buttons">
+                        <button class="button">Default button</button><br>
+                        <button class="button button_wrong">Wrong answer</button><br>
+                        <button class="button button_correct">Correct answer</button><br>
+                        <button class="button button_passive">Unclicked button</button><br>
+                    </div>
+                </div>
+      
+                <div class="quiz__footer">
+                    <div class="footer__content" id="pages">0 / 0</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script src="../js/index/testTwo.js?_v=20240605220900"></script>
     </div>
 </div>
 
@@ -103,7 +122,7 @@
   </div>
 </footer>
 </div>
-<script src="js/app.min.js?_v=20240604171831"></script>
-<script src="js/header.js?_v=20240604171831"></script>
+<script src="js/app.min.js?_v=20240605220900"></script>
+<script src="js/header.js?_v=20240605220900"></script>
 </body>
 </html>
