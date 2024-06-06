@@ -15,6 +15,11 @@ addEventListener('DOMContentLoaded', () => {
 			disable: false,
 			className: 'disable',
 		})
+		const disableTest = new DisableClass({
+			element: document.querySelector('.test'),
+			disable: false,
+			className: 'disable',
+		})
 	const startTimer = new Timer({
 		time: 1,
 		elemMin: document.querySelector('.time-min'),
@@ -23,6 +28,7 @@ addEventListener('DOMContentLoaded', () => {
 	})
 	btnStartTest.onclick = () => {
 		startTest.setActive(true)
+		disableTest.setDisable(false)
         disableFrameTestStart.setDisable(true)
 		// timer()
 		startTimer.start()
