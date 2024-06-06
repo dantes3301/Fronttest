@@ -4,7 +4,7 @@ export default class Question
    {
        this.text = text;
        this.answers = answers;
-       console.log(this.text, this.answers);
+       console.log(this.text, this.answers[0]);
    }
    
 
