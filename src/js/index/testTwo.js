@@ -127,10 +127,10 @@ export function quizFunc (){
     }
     const results =
     [
-       new Result("Вам многому нужно научиться", 0),
-       new Result("Вы уже неплохо разбираетесь", 2),
-       new Result("Ваш уровень выше среднего", 4),
-       new Result("Вы в совершенстве знаете тему", 6)
+       new Result( '<div class="title">Вам многому нужно научиться</div>', 0),
+       new Result( '<div class="title">Вы уже неплохо разбираетесь</div>', 4),
+       new Result( '<div class="title">Ваш уровень выше среднего</div>', 8),
+       new Result( '<div class="title">Вы в совершенстве знаете тему</div>', 10)
     ];
      
     //Массив с вопросами
@@ -263,12 +263,12 @@ export function quizFunc (){
 				buttonsElem.innerHTML = ''
 				headElem.innerHTML = quiz.results[quiz.result].text
                 
-                
-				pagesElem.innerHTML =
-					'Вы ответили правильно на ' +
+                pagesElem.innerHTML = ''
+				headElem.innerHTML +=
+					'<div class="title">Вы ответили правильно на ' +
 					quiz.score +
 					' из ' +
-					quiz.questions.length
+					quiz.questions.length + '</div>'
 				for (let i = 0; i < quiz.questions.length; i++) {
 		
 					let questContainer = document.createElement('div')
